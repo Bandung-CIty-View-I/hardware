@@ -16,12 +16,11 @@
 #define USER_EMAIL "bcv1_hwsystem@gmail.com"
 #define USER_PASSWORD "rw13_bcv1_hwSystem"
 
-WiFiClientSecure client;
-
 FirebaseData fbdo;
 FirebaseAuth auth;
 FirebaseConfig config;
 
+WiFiClientSecure client;
 String inputString = "";  
 bool stringComplete = false;  
 int communication = 2; 

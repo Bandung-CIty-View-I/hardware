@@ -39,7 +39,7 @@ void loop() {
   if (automation == 1) {
     currentRelay1State = (currentRadar1 == LOW) ? LOW : HIGH;
     currentRelay2State = (currentRadar2 == LOW) ? LOW : HIGH;
-    currentRelay3State = (radar_atas == LOW) ? LOW : HIGH; //radar3 penuh & RADAR ATAS KOSONG = mendorong air ke atas
+    currentRelay3State = (radar_atas == LOW) ? LOW : HIGH; //RADAR ATAS KOSONG = mendorong air ke atas
 
     digitalWrite(relay1, currentRelay1State);
     digitalWrite(relay2, currentRelay2State);
@@ -102,7 +102,7 @@ void sendCommunication() {
   doc["relay3State"] = currentRelay3State;
   doc["radar1"] = currentRadar1;
   doc["radar2"] = currentRadar2;
-  doc["radar3"] = currentRadar3;
+  doc["radar3"] = currentRadar2;
   doc["communication"] = communication;
 
   String data;
